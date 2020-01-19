@@ -1,0 +1,10 @@
+[Unit]
+Description=Starts jack and zita-n2j
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/pi/start_jack.sh
+
+[Install]
+WantedBy=multi-user.target
