@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  mopidy:
+    build: ./mopidy
+    image: mopidy
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - 80:6680
+  jack:
+    build: ./jack
+    image: jack
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - 3000:3000/udp
